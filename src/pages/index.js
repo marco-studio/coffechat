@@ -36,10 +36,10 @@ const IndexPage = ({ data }) => {
               {data.site.siteMetadata.title}
             </div>
             <div className="text-base mt-3 md:text-base text-gray-900">
-              By {data.site.siteMetadata.author}
+              With {data.site.siteMetadata.author}
             </div>
             <ul className="md:flex mt-6 hidden text-gray-100">
-              {/* <li className="mr-8">
+              <li className="mr-8">
                 <a href={data.site.siteMetadata.facebook}>
                   <svg
                     width="24"
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
                     />
                   </svg>
                 </a>
-              </li> */}
+              </li>
               <li className="mr-8">
                 <a href={data.site.siteMetadata.twitter}>
                   <svg
@@ -128,18 +128,14 @@ const IndexPage = ({ data }) => {
            md:text-xl"
           />
           <div className="mt-3 text-gray-700 leading-relaxed md:text-xl">
-            Hey, meet Bilal, Kwaku, Patrick &amp; Tom. 4 Black &amp; Mixed-Race
-            guys who became friends whilst studying at Cambridge University.
-            Join us as we talk about life before, during and well - after 'The
-            Bridge'. Expect chats about life, and our own experiences
+            Drinks coffee and chats with remarkable people.
           </div>
           <div className="mt-3 text-gray-700 leading-relaxed md:text-xl">
-            Cast:
-            <br /> Kwaku: @KwakuDapaah_ <br /> Patrick: @CariocoLondrino <br />{" "}
-            Bilal: @Tweetsbybilal <br /> Tom: @TomTheEconomist
+            for the podcast to be more discoverable the description needs to be
+            more detailed
           </div>
           <ul className={`flex justify-center mt-12 md:mt-16 text-gray-900`}>
-            {/* <li className="">
+            <li className="">
               <a href={data.site.siteMetadata.facebook}>
                 <svg
                   width="24"
@@ -155,8 +151,8 @@ const IndexPage = ({ data }) => {
                   />
                 </svg>
               </a>
-            </li> */}
-            <li className="">
+            </li>
+            <li className="ml-10">
               <a href={data.site.siteMetadata.twitter}>
                 <svg
                   width="24"
@@ -273,7 +269,9 @@ export const query = graphql`
           title
           pubDate
           id
-          content
+          content {
+            encoded
+          }
           itunes {
             duration
             summary
